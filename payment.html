@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Options - FIFA World Cup 2026 Tickets</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #FFD700; margin: 0; padding: 15px; }
+    .payment-container { background: #FFFF00; border: 1px solid #ddd; border-radius: 8px; padding: 30px; max-width: 600px; margin: 20px auto; }
+    .trophy { width: 40px; height: 40px; margin: 0 10px; }
+    h1 { text-align: center; color: #111; display: flex; align-items: center; justify-content: center; }
+    .payment-option { background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin: 10px 0; cursor: pointer; }
+    .payment-option:hover { background: #f0f0f0; }
+    .payment-method { font-weight: bold; font-size: 18px; margin-bottom: 5px; }
+    .payment-details { color: #555; font-size: 14px; }
+    .match-info { background: #e8f4fd; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+<h1>
+  <img class="trophy" src="https://cdn-icons-png.flaticon.com/512/1021/1021060.png" alt="Trophy">
+  Payment Options
+  <img class="trophy" src="https://cdn-icons-png.flaticon.com/512/1021/1021060.png" alt="Trophy">
+</h1>
+
+<div class="payment-container">
+  <div class="match-info" id="matchInfo">
+    <strong>Selected Match:</strong> <span id="matchName"></span><br>
+    <strong>Price:</strong> $<span id="matchPrice"></span>
+  </div>
+
+  <div class="payment-option" onclick="payWithPayPal()">
+    <div class="payment-method">PayPal</div>
+    <div class="payment-details">Pay securely with your PayPal account</div>
+  </div>
+
+  <div class="payment-option" onclick="payWithGooglePay()">
+    <div class="payment-method">Google Pay</div>
+    <div class="payment-details">Send payment to: cyrex921@gmail.com</div>
+  </div>
+</div>
+
+<script>
+// Get match details from URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+const matchName = urlParams.get('match') || 'Unknown Match';
+const matchPrice = urlParams.get('price') || '0';
+
+document.getElementById('matchName').textContent = matchName;
+document.getElementById('matchPrice').textContent = matchPrice;
+
+function payWithPayPal() {
+  window.open('https://www.paypal.com/paypalme/absolombulus5/' + matchPrice, '_blank');
+}
+
+function payWithGooglePay() {
+  alert('Please send $' + matchPrice + ' to cyrex921@gmail.com via Google Pay. Include match: ' + matchName);
+}
+</script>
+
+</body>
+</html>
