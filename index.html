@@ -12,22 +12,24 @@
     .details { color: #555; margin-bottom: 5px; }
     .availability { color: #d9534f; font-weight: bold; margin-bottom: 5px; }
     .price { margin-top: 8px; }
-    input.price-input { width: 120px; padding: 6px; font-size: 16px; }
     a.buy-btn { display: inline-block; margin-top: 8px; padding: 10px 16px; background: #0078ff; color: #fff; text-decoration: none; border-radius: 5px; margin-right: 10px; }
-    a.paypal-btn { display: inline-block; margin-top: 8px; padding: 10px 16px; background: #ffc439; color: #003087; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    a.paypal-btn { display: inline-block; margin-top: 8px; padding: 10px 16px; background: #28a745; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    .whatsapp-float { position: fixed; top: 20px; right: 20px; z-index: 1000; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+    .whatsapp-float img { width: 30px; height: 30px; }
   </style>
 </head>
 <body>
 
+<a href="https://wa.me/16365254539" target="_blank" class="whatsapp-float">
+  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+</a>
+
 <h1>
   <img class="trophy" src="https://cdn-icons-png.flaticon.com/512/1021/1021060.png" alt="Trophy">
-  FIFA World Cup 2026 Tickets for Sale
-
-  Thrid phase tickets available now !
+  FIFA World Cup 2026 Tickets for Sale - Third phase tickets available now!
   <img class="trophy" src="https://cdn-icons-png.flaticon.com/512/1021/1021060.png" alt="Trophy">
 </h1>
 
-<!-- Match 1 -->
 <div class="match-card">
   <div class="teams">Mexico vs South Africa</div>
   <div class="details">Date: June 11, 2026 | Venue: Estadio Azteca, Mexico City</div>
@@ -35,43 +37,39 @@
   <label class="price">Price: $900</label>
   <br>
   <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('Mexico vs South Africa', '900')">Pay with PayPal</a>
+  <a class="paypal-btn" href="javascript:buyTicket('Mexico vs South Africa', '900')">Purchase</a>
 </div>
 
-<!-- Match 2 -->
 <div class="match-card">
-  <div class="teams">Group A Match (South Korea vs UEFA Playoff)</div>
+  <div class="teams">South Korea vs UEFA Playoff</div>
   <div class="details">Date: June 11, 2026 | Venue: Estadio Akron, Guadalajara</div>
   <div class="availability">12 tickets available</div>
   <label class="price">Price: $700</label>
   <br>
   <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('South Korea vs UEFA Playoff', '300')">Pay with PayPal</a>
+  <a class="paypal-btn" href="javascript:buyTicket('South Korea vs UEFA Playoff', '700')">Purchase</a>
 </div>
 
-<!-- Match 3 -->
 <div class="match-card">
   <div class="teams">Canada vs UEFA Playoff A</div>
   <div class="details">Date: June 12, 2026 | Venue: BMO Field, Toronto</div>
-  <div class="availability">9 tickets available</div>
+  <div class="availability">12 tickets available</div>
   <label class="price">Price: $1000</label>
   <br>
   <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('Canada vs UEFA Playoff A', '1000')">Pay with PayPal</a>
+  <a class="paypal-btn" href="javascript:buyTicket('Canada vs UEFA Playoff A', '1000')">Purchase</a>
 </div>
 
-<!-- Match 4 -->
 <div class="match-card">
   <div class="teams">USA vs Paraguay</div>
   <div class="details">Date: June 12, 2026 | Venue: SoFi Stadium, Los Angeles</div>
-  <div class="availability">11 tickets available</div>
+  <div class="availability">12 tickets available</div>
   <label class="price">Price: $1200</label>
   <br>
   <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('USA vs Paraguay', '1200')">Pay with PayPal</a>
+  <a class="paypal-btn" href="javascript:buyTicket('USA vs Paraguay', '1200')">Purchase</a>
 </div>
 
-<!-- Match 5 -->
 <div class="match-card">
   <div class="teams">Qatar vs Switzerland</div>
   <div class="details">Date: June 13, 2026 | Venue: Levi's Stadium, San Francisco</div>
@@ -79,111 +77,96 @@
   <label class="price">Price: $1500</label>
   <br>
   <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('Qatar vs Switzerland', '1500')">Pay with PayPal</a>
+  <a class="paypal-btn" href="javascript:buyTicket('Qatar vs Switzerland', '1500')">Purchase</a>
 </div>
 
-<!-- Match 6 -->
 <div class="match-card">
   <div class="teams">Brazil vs Morocco</div>
   <div class="details">Date: June 13, 2026 | Venue: MetLife Stadium, New York/New Jersey</div>
-  <div class="availability">0 tickets available</div>
+  <div class="availability">15 tickets available</div>
   <label class="price">Price: $1200</label>
   <br>
   <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('Brazil vs Morocco', '1200')">Pay with PayPal</a>
+  <a class="paypal-btn" href="javascript:buyTicket('Brazil vs Morocco', '1200')">Purchase</a>
 </div>
-<!-- Match 7 -->
+
 <div class="match-card">
-  <div class="teams">Group C Match (HAI vs SCO)</div>
-  <div class="details">Date: June 14, 2026 | Venue: Boston Stadium,Boston</div>
+  <div class="teams">Haiti vs Scotland</div>
+  <div class="details">Date: June 14, 2026 | Venue: Boston Stadium, Boston</div>
   <div class="availability">15 tickets available</div>
   <label class="price">Price: $900</label>
   <br>
   <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('HAI vs SCO', '900')">Pay with PayPal</a>
+  <a class="paypal-btn" href="javascript:buyTicket('Haiti vs Scotland', '900')">Purchase</a>
 </div>
-<!-- Match 8 -->
+
 <div class="match-card">
-  <div class="teams">Group F Match (NED vs JPN)</div>
-  <div class="details">Date: June 14, 2026 | Venue: Dallas Stadium,Dallas
-  </div>
-  <div class="availability">12 tickets available</div>
-  <label class="price">Price: $1200</label>
-  <br>
-  <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('South Korea vs UEFA Playoff', '300')">Pay with PayPal</a>
-</div>
-<!-- Match 9 -->
-<div class="match-card">
-  <div class="teams">Group E Match (GER VS CUW)</div>
-  <div class="details">Date: June 14, 2026 | Venue: Houston Stadium,Houston</div>
+  <div class="teams">Netherlands vs Japan</div>
+  <div class="details">Date: June 14, 2026 | Venue: Dallas Stadium, Dallas</div>
   <div class="availability">15 tickets available</div>
   <label class="price">Price: $1200</label>
   <br>
   <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('GER VS CUW', '1200')">Pay with PayPal</a>
+  <a class="paypal-btn" href="javascript:buyTicket('Netherlands vs Japan', '1200')">Purchase</a>
 </div>
-<!-- Match 10 -->
+
 <div class="match-card">
-  <div class="teams">Group E Match (CIV VS ECU)</div>
-  <div class="details">Date: June 15, 2026 | Venue:Philadelphia Stadium</div>
-  <div class="availability">9 tickets available</div>
-  <label class="price">Price: $950</label>
-  <br>
-  <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('CIV VS ECU', '950')">Pay with PayPal</a>
-</div>
-<!-- Match 11 -->
-<div class="match-card">
-  <div class="teams">Group H Match (ESP VS CPV)</div>
-  <div class="details">Date: June 15, 2026 | Venue: Atlanta Stadium</div>
-  <div class="availability">4 tickets available</div>
+  <div class="teams">Germany vs Curacao</div>
+  <div class="details">Date: June 14, 2026 | Venue: Houston Stadium, Houston</div>
+  <div class="availability">15 tickets available</div>
   <label class="price">Price: $1200</label>
   <br>
   <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('ESP VS CPV', '1200')">Pay with PayPal</a>
+  <a class="paypal-btn" href="javascript:buyTicket('Germany vs Curacao', '1200')">Purchase</a>
 </div>
-<!-- Match 12 -->
+
 <div class="match-card">
-  <div class="teams">Group G Match (BEL VS EGY)</div>
-  <div class="details">Date: June 15, 2026 | Venue: Seattle Stadium , Seattle</div>
+  <div class="teams">Ivory Coast vs Ecuador</div>
+  <div class="details">Date: June 15, 2026 | Venue: Philadelphia Stadium</div>
+  <div class="availability">8 tickets available</div>
+  <label class="price">Price: $950</label>
+  <br>
+  <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
+  <a class="paypal-btn" href="javascript:buyTicket('Ivory Coast vs Ecuador', '950')">Purchase</a>
+</div>
+
+<div class="match-card">
+  <div class="teams">Spain vs Cape Verde</div>
+  <div class="details">Date: June 15, 2026 | Venue: Atlanta Stadium</div>
+  <div class="availability">8 tickets available</div>
+  <label class="price">Price: $1200</label>
+  <br>
+  <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
+  <a class="paypal-btn" href="javascript:buyTicket('Spain vs Cape Verde', '1200')">Purchase</a>
+</div>
+
+<div class="match-card">
+  <div class="teams">Belgium vs Egypt</div>
+  <div class="details">Date: June 15, 2026 | Venue: Seattle Stadium, Seattle</div>
   <div class="availability">8 tickets available</div>
   <label class="price">Price: $800</label>
   <br>
   <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('BEL VS EGY', '800')">Pay with PayPal</a>
+  <a class="paypal-btn" href="javascript:buyTicket('Belgium vs Egypt', '800')">Purchase</a>
 </div>
-<!-- Match 13 -->
+
 <div class="match-card">
-  <div class="teams">Group G Match (FRA VS SEN)</div>
+  <div class="teams">France vs Senegal</div>
   <div class="details">Date: June 16, 2026 | Venue: New York/New Jersey Stadium</div>
   <div class="availability">8 tickets available</div>
   <label class="price">Price: $1200</label>
   <br>
   <a class="buy-btn" href="mailto:cyrex921@gmail.com">Contact to Buy</a>
-  <a class="paypal-btn" href="javascript:buyTicket('FRA VS SEN', '1200')">Pay with PayPal</a>
+  <a class="paypal-btn" href="javascript:buyTicket('France vs Senegal', '1200')">Purchase</a>
 </div>
 
-
-<!-- Add more matches below in the same style -->
-<!-- You can continue with the other group stage games from June 14–27 and the knockout dates -->
-<!-- Source: official match schedule from FIFA and reliable published fixtures :contentReference[oaicite:2]{index=2} -->
-
 <script>
-// Check if user is logged in
 if (!localStorage.getItem('userEmail')) {
   window.location.href = 'login.html';
 }
 
 function buyTicket(matchName, price) {
-  const userName = localStorage.getItem('userName');
-  const userEmail = localStorage.getItem('userEmail');
-  
-  // Send email notification (this would need a backend service)
-  alert(`Thank you ${userName}! Payment confirmation will be sent to ${userEmail}`);
-  
-  // Redirect to PayPal
-  window.open('https://www.paypal.com/paypalme/absolombulus5/' + price, '_blank');
+  window.location.href = 'payment.html?match=' + encodeURIComponent(matchName) + '&price=' + price;
 }
 </script>
 
