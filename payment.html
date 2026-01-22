@@ -8,7 +8,7 @@
     .payment-container { background: #FFFF00; border: 1px solid #ddd; border-radius: 8px; padding: 30px; max-width: 600px; margin: 20px auto; }
     .trophy { width: 40px; height: 40px; margin: 0 10px; }
     h1 { text-align: center; color: #111; display: flex; align-items: center; justify-content: center; }
-    .payment-option { background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin: 10px 0; cursor: pointer; }
+    .payment-option { background: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin: 10px 0; cursor: pointer; text-decoration: none; color: inherit; display: block; }
     .payment-option:hover { background: #f0f0f0; }
     .payment-method { font-weight: bold; font-size: 18px; margin-bottom: 5px; }
     .payment-details { color: #555; font-size: 14px; }
@@ -29,15 +29,20 @@
     <strong>Price:</strong> $<span id="matchPrice"></span>
   </div>
 
-  <div class="payment-option" onclick="payWithPayPal()">
+  <a href="javascript:payWithPayPal()" class="payment-option">
     <div class="payment-method">PayPal</div>
     <div class="payment-details">Pay securely with your PayPal account</div>
-  </div>
+  </a>
 
-  <div class="payment-option" onclick="payWithGooglePay()">
+  <a href="https://pay.google.com/send/home" target="_blank" class="payment-option">
     <div class="payment-method">Google Pay</div>
     <div class="payment-details">Send payment to: cyrex921@gmail.com</div>
-  </div>
+  </a>
+
+  <a href="javascript:payWithBitcoin()" class="payment-option">
+    <div class="payment-method">Bitcoin (BTC)</div>
+    <div class="payment-details">Send payment to: bc1qe9wmwyhkyar89y590xallnc5j0pgr4rgq522x3</div>
+  </a>
 </div>
 
 <script>
@@ -55,6 +60,42 @@ function payWithPayPal() {
 
 function payWithGooglePay() {
   alert('Please send $' + matchPrice + ' to cyrex921@gmail.com via Google Pay. Include match: ' + matchName);
+}
+
+function payWithBitcoin() {
+  const btcAddress = 'bc1qe9wmwyhkyar89y590xallnc5j0pgr4rgq522x3';
+  const amount = matchPrice;
+  
+  // Try to open common crypto wallet apps
+  const walletApps = [
+    `bitcoin:${btcAddress}?amount=${amount}&label=WorldCup2026-${encodeURIComponent(matchName)}`,
+    `coinbase://send?address=${btcAddress}&amount=${amount}`,
+    `trust://send?coin=0&address=${btcAddress}&amount=${amount}`,
+    `metamask://send?address=${btcAddress}&amount=${amount}`
+  ];
+  
+  let appOpened = false;
+  
+  // Try each wallet app
+  walletApps.forEach((url, index) => {
+    setTimeout(() => {
+      if (!appOpened) {
+        try {
+          window.location.href = url;
+          appOpened = true;
+        } catch (e) {
+          // App not available, continue to next
+        }
+      }
+    }, index * 500);
+  });
+  
+  // Fallback message after trying apps
+  setTimeout(() => {
+    if (!appOpened) {
+      alert('Please send $' + matchPrice + ' worth of Bitcoin to:\n\n' + btcAddress + '\n\nMatch: ' + matchName + '\n\nUse any Bitcoin wallet app on your device.');
+    }
+  }, 2500);
 }
 </script>
 
